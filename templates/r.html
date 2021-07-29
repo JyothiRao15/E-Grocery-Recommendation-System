@@ -1,0 +1,48 @@
+<style>
+body {
+  background-image: url('https://image.shutterstock.com/image-photo/eco-friendly-reusable-shopping-bag-260nw-590746682.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+</style>
+<!DOCTYPE html>
+<html>
+    <style>
+        table, th, td {
+          border: 1px solid black;
+        }
+        </style>
+    <style>
+        body {
+          background-color: rgb(200, 190, 200);
+        }
+        </style>
+        <style>
+            div.Mostlikely {
+                padding: 100px 0;
+                text-align: left;
+            }
+            table.tab {
+                margin-left: left; 
+            
+            }
+           
+    
+        </style>
+
+<body>
+    <div class='Mostlikely'>
+    	<h1>Products not bought by the customer and most likely to buy</h1>
+    <table class='tab'>
+        {% for i in recd %}
+        <tr>
+            <th>{{ i }}</th>
+        </tr>
+        {% endfor %}
+    </table>
+    </div>
+    <br>
+    
+</body>
+</html>

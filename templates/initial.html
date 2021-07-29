@@ -1,0 +1,64 @@
+<style>
+body {
+  background-image: url('https://t3.ftcdn.net/jpg/02/72/58/94/360_F_272589460_VARl7F6cUpx6RXuV5suqOLX9KoDKoF9A.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+</style>
+
+{% block content %}
+<table style="pink">
+<div class="shadow p-3 mb-5 bg-orange">
+  <table style="pink">
+  <h1 style="color:rgb(0, 0, 0)">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp WELCOME TO GROCERY RECOMMENDER SYSTEM</h1>
+  <h2 style="color:rgb(0, 0, 150)">Enter the item name you like to get recommendations.</h2>
+</div>
+
+  <form action="{{url_for('recommend')}}">
+    <br><input type="text" name="item" class="form-control" placeholder="Item name here">
+    <br>
+    <br>
+    
+
+    <input type="text" name="n" class="form-control" placeholder="Number of items">
+    <br>
+    <br>
+
+    <input type="submit" class="btn btn-info" value="Recommend">
+  </form>
+    <br>
+    <br>
+  
+  <h2 style="color:rgb(0, 0, 150)">Items that are mostlikely to buy by the customer.</h2>
+  <h3 style="color:rgb(0, 0, 0)">Enter the customer ID.</h3>
+</div>
+    <br>
+    
+  <form action="{{url_for('Submit')}}">
+    <input type="text" name="cust_id" class="form-control" placeholder="Customer ID">
+    <br>
+    <br>
+
+    <input type="text" name="num_items" class="form-control" placeholder="Number of items">
+    <br>
+    <br>
+    
+     <input type="Submit" class="btn btn-info" value="Submit">
+  </form>
+    <br>
+    <br>
+    <h2 style="color:rgb(0, 0, 150)">Items that are already bought by the customer.</h2>
+</div>
+    <br>
+    
+    <form action="{{url_for('Enter')}}">
+    <input type="text" name="cust_id" class="form-control" placeholder="Customer ID">
+    <br>
+    <br>
+    
+    <input type="submit" class="btn btn-info" value="Enter">
+  </form>
+    <br>
+    <br>
+{% endblock %}

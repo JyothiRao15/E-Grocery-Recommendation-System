@@ -1,0 +1,33 @@
+<style>
+body {
+  background-image: url('https://image.shutterstock.com/image-photo/food-groceries-shopping-basket-on-260nw-1177346140.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+</style>
+
+{% block content %}
+
+  {% if t=='s' %}
+  <div class="shadow p-3 mb-5 bg-white rounded">
+    <h1 style="color:rgb(0, 0, 0)">Sorry! This item is not in our database.</h1>
+    <h1 style="color:rgb(0, 0, 0)">Please enter some other item.</h1>
+    <h1 style="color:rgb(0, 0, 0)">Or try with another item.</h1>
+  </div>
+   <br>
+   
+  {% else %}
+  <div class="shadow p-3 mb-5 bg-pink rounded">
+    <br><h1 style="color:rgb(0, 0, 0)">&nbsp&nbsp&nbsp&nbsp"{{item}}" is a great choice.</h1>
+    <h2 style="color:rgb(78, 0, 68)">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspHere are some more like this</h2>
+  </div>
+
+    <ul class="list-group list-group-flush">
+      {% for m in r %}
+        <h2 class="list-group-item" style="color:rgb(0, 0, 0)"><strong>{{m|capitalize}}</strong></h2>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+{% endblock %}
